@@ -21,9 +21,9 @@ const UserShoutoutContextProvider = ({ children }: Props) => {
     }
   };
 
-  // useEffect(() => {
-  //   getUserShoutoutHandler();
-  // }, [userShoutouts]);
+  useEffect(() => {
+    getUserShoutoutHandler();
+  }, [userShoutouts]);
 
   return (
     <UserContext.Provider value={{ user, getUserShoutout, userShoutouts }}>
