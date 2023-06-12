@@ -26,11 +26,7 @@ const SingleShoutout = ({ shoutout, update }: Props) => {
       <p>
         - from:{" "}
         {shoutout.authorPhoto && (
-          <img
-            className="author"
-            src={shoutout.authorPhoto}
-            alt={"author profile picture"}
-          />
+          <img className="author" src={shoutout.authorPhoto} alt={"author"} />
         )}
         {"   "}
         <Link to={`/user/${encodeURIComponent(shoutout.from)}`}>
@@ -39,11 +35,7 @@ const SingleShoutout = ({ shoutout, update }: Props) => {
       </p>
       <p className="theShoutout">{shoutout.shoutout}</p>
       {shoutout.shoutoutPHoto && (
-        <img
-          src={shoutout.shoutoutPHoto}
-          alt={"shoutout"}
-          className="userPhoto"
-        />
+        <img src={shoutout.shoutoutPHoto} alt={"shoutout"} className="user" />
       )}
       <button onClick={deleteHandler}>Delete</button>
     </div>

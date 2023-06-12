@@ -16,13 +16,14 @@ const UserShoutoutContextProvider = ({ children }: Props) => {
     if (user) {
       getUserShoutout(user._id!).then((response) => {
         setAllUserShoutouts(response);
+        console.log(allUserShoutouts);
       });
     }
   };
 
-  useEffect(() => {
-    getUserShoutoutHandler();
-  }, [userShoutouts]);
+  // useEffect(() => {
+  //   getUserShoutoutHandler();
+  // }, [userShoutouts]);
 
   return (
     <UserContext.Provider value={{ user, getUserShoutout, userShoutouts }}>
