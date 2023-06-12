@@ -1,0 +1,21 @@
+.SingleUserShoutout {
+  margin: 15px 5px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.SingleUserShoutout .boldTo {
+  font-weight: 900;
+}
+.SingleUserShoutout h3 {
+  margin: 2px 0px;
+}
+.SingleUserShoutout p {
+  margin: 2px 0px;
+}
+.SingleUserShoutout .theShoutout {
+  margin-top: 5px;
+  margin-left: 10px;
+}

@@ -1,5 +1,5 @@
 .SingleShoutout {
-  margin: 30px 5px;
+  margin: 15px 5px;
   border: 1px solid black;
   background-color: white;
   border-radius: 8px;
@@ -18,4 +18,21 @@
 .SingleShoutout .theShoutout {
   margin-top: 5px;
   margin-left: 10px;
+}
+
+.SingleShoutout a {
+  color: blue;
+  text-decoration: none;
+}
+
+.SingleShoutout img {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+.SingleShoutout .userPhoto {
+  height: 100px;
+  width: 100px;
+  border-radius: 0;
 }

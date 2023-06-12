@@ -1,31 +1,29 @@
+import {
+  BrowserRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
 import "./App.css";
-import ShoutoutList from "./components/ShoutoutList";
-import { useEffect, useState } from "react";
-import Shoutout from "./models/Shoutout";
-import { getAllShoutouts } from "./services/shoutoutApiService";
-import NewSOForm from "./components/NewSOForm";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import UserShoutouts from "./components/UserShoutouts";
+import { useContext } from "react";
+import AuthContext from "./context/AuthContext";
 
 function App() {
-  const [allShoutouts, setAllShoutouts] = useState<Shoutout[]>([]);
-
-  const keepinItFresh = () => {
-    getAllShoutouts().then((res) => {
-      setAllShoutouts(res);
-    });
-  };
-
-  useEffect(() => {
-    keepinItFresh();
-  }, []);
-
+  const { user } = useContext(AuthContext);
   return (
     <div className="App">
-      <header>
-        <h1>All Shout Outs</h1>
-      </header>
-
-      <ShoutoutList shoutoutArray={allShoutouts} />
-      <NewSOForm refresh={keepinItFresh} />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/user/:name" element={<UserShoutouts />} />
+          <Route path="/me" element={user ? <UserShoutouts /> : <Main />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

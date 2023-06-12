@@ -24,6 +24,10 @@ h2 {
   margin: 0px 5px;
 }
 
+.NewSOForm textarea {
+  margin: 0px 5px;
+}
+
 .NewSOForm #shoutout {
   width: auto;
   height: auto;
@@ -34,5 +38,6 @@ h2 {
   background-color: white;
   padding: 5px;
   margin-left: 5px;
+  margin-top: 10px;
   border-color: #999;
 }
