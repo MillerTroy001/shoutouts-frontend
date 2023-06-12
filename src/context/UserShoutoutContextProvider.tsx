@@ -1,4 +1,4 @@
-import { ReactNode, useContext, useEffect, useState } from "react";
+import { ReactNode, useContext, useState } from "react";
 import Shoutout from "../models/Shoutout";
 import UserContext from "./UserShoutoutContext";
 import UserShoutoutContext from "./UserShoutoutContext";
