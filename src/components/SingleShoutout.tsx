@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import Shoutout from "../models/Shoutout";
 import "./SingleShoutout.css";
 import { deleteOneShoutout } from "../services/shoutoutApiService";
-import { useEffect } from "react";
 
 interface Props {
   shoutout: Shoutout;
@@ -28,7 +27,7 @@ const SingleShoutout = ({ shoutout, update }: Props) => {
         - from:{" "}
         {shoutout.authorPhoto && (
           <img
-            className="author-image"
+            className="author"
             src={shoutout.authorPhoto}
             alt={"author profile picture"}
           />
@@ -42,7 +41,7 @@ const SingleShoutout = ({ shoutout, update }: Props) => {
       {shoutout.shoutoutPHoto && (
         <img
           src={shoutout.shoutoutPHoto}
-          alt={"shoutout photo"}
+          alt={"shoutout"}
           className="userPhoto"
         />
       )}

@@ -3,10 +3,7 @@ import "./UserShoutouts.css";
 import { useContext, useEffect, useState } from "react";
 import Shoutout from "../models/Shoutout";
 import SingleUserShoutout from "./SingleUserShoutout";
-import {
-  getAllShoutouts,
-  getUserShoutout,
-} from "../services/shoutoutApiService";
+import { getUserShoutout } from "../services/shoutoutApiService";
 import NewSOForm from "./NewSOForm";
 import AuthContext from "../context/AuthContext";
 
